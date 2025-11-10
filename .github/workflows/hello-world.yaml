@@ -1,0 +1,23 @@
+#name: Hello World
+#items:
+#  sub-item:
+#    name: Hello
+#    description: world
+#  sub-list:
+#    - element a
+#    - element b
+#  other-list: [1, 2, 3]
+
+
+name: Hello World
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Hello World
+        run: echo "Hello World"
