@@ -1,0 +1,9 @@
+#on:
+#  workflow_dispatch:
+#  push:
+#
+
+- name: Deploy Python via Ansible
+  working-directory: ./devops/ansible/
+  run: |
+    ansible-playbook deploy-python.yaml
